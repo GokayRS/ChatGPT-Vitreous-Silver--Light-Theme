@@ -1,0 +1,114 @@
+/* ==UserStyle==
+@name         Vitreous Silver  Light - ChatGPT
+@version      20261110.13.07
+@namespace    https://github.com/GokayRS/ChatGPT-Vitreous-Silver--Light-Theme
+@description  An elegant ChatGPT theme featuring blurred translucent panels, continuous silver gradients, and optimized typography./Un elegante tema para ChatGPT con estética de paneles translúcidos difuminados, degradados plateados continuos y tipografía optimizada.
+@homepage     https://github.com/GokayRS/ChatGPT-Vitreous-Silver--Light-Theme
+@author       GokayRS
+@license      MIT
+==/UserStyle== */
+
+@-moz-document domain("chat.openai.com"), domain("chatgpt.com") {
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap');
+
+/* 1. Fuente base para la interfaz, botones y entradas de texto */
+body,
+button,
+input,
+textarea {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+/* 2. Negritas (tanto estándar como con atributos nativos de ChatGPT) */
+strong,
+b,
+[data-d-default-strong],
+[class*="font-semibold"],
+[class*="font-bold"] {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-weight: 700 !important;
+}
+
+/* 3. Cursivas (tanto estándar como con el atributo nativo de estilo) */
+em,
+i,
+[data-d-font-style="italic"],
+[class*="italic"] {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    font-style: italic !important;
+}
+
+/* 4. Bloques de código (asegurando una fuente monoespaciada limpia pero con la misma base si se prefiere) */
+code,
+[data-d-component="code"] {
+    font-family: 'Fira Code', 'JetBrains Mono', monospace !important;
+}
+
+/* 5. Títulos y Subtítulos basados en los componentes de ChatGPT */
+[data-d-component="title"],
+h1,
+h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+[class*="--thread-content-max-width"] {
+    --thread-content-max-width: 100% !important;
+    --thread-body-max-width: 100% !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    box-sizing: border-box !important;
+    margin-inline: 0 !important;
+}
+
+[data-user-message-bubble] {
+    --user-chat-width: 70% !important;
+    max-width: 70% !important;
+    box-sizing: border-box !important;
+}
+
+.thread-scroll-container > [class*="[container-name:thread-content]"] {
+    transform: none !important;
+}
+
+div.flex.items-center.gap-1 > button:has(svg) {
+    display: none !important;
+}
+
+main,
+div.absolute.inset-0.flex.bg-surface,
+button[aria-controls="app-shell-sidebar"] {
+    background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 40%), linear-gradient(45deg, #cbd5e1 0%, #f8fafc 100%) !important;
+    background-attachment: fixed !important;
+}
+
+div[data-composer-body] {
+    background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 40%), linear-gradient(45deg, #cbd5e1 0%, #f8fafc 100%) !important;
+    background-attachment: fixed !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 26px !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.08), inset 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+}
+
+div[data-sidebar-navigation-root="true"] {
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 25px !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0.15) 100%) !important;
+}
+
+.bg-surface {
+    background: unset !important;
+}
+
+div[class*="rounded-[var(--radius-suggestion-menu"] {
+    background: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.7) 0%, transparent 40%), linear-gradient(45deg, #cbd5e1 0%, #f8fafc 100%) !important;
+    background-attachment: fixed !important;
+    backdrop-filter: blur(16px) !important;
+    -webkit-backdrop-filter: blur(16px) !important;
+    border: 2px solid rgba(255, 255, 255, 0.6) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.12), inset 0 0 0 1px rgba(255, 255, 255, 0.4) !important;
+}
+}
